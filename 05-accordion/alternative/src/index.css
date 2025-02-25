@@ -267,6 +267,8 @@ main {
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
   width: 90vw;
   margin: 5rem auto;
   background: var(--white);
@@ -320,4 +322,45 @@ main {
   /* optional - last item */
   align-self: flex-start;
   min-width: 2rem;
+}
+
+
+
+/* Ensures the questions stack naturally */
+.questions-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ✅ Places pagination below the accordion */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 40px;
+  /* Ensures pagination appears BELOW */
+}
+
+.pagination button {
+  padding: 10px 15px;
+  border: 1px solid #333;
+  background: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pagination button:hover {
+  background: #333;
+  color: white;
+}
+
+.pagination button.active {
+  background: #333;
+  color: white;
+}
+
+.pagination button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
